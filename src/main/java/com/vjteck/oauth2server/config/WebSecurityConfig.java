@@ -49,7 +49,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .dataSource(this.dataSource)
                 .passwordEncoder(passwordEncoder())
                 .usersByUsernameQuery("SELECT  custId as username, trim(pwd) AS password , 'true' as enabled  FROM CUST where custId= ?")
-                .authoritiesByUsernameQuery("select ? AS username, 'ROLE_USER' as authority FROM CUST where 1=1");
+                .authoritiesByUsernameQuery(" select custId as username,  authority FROM CUST where custId = ?");
         
     }
     
