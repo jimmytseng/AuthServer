@@ -1,18 +1,16 @@
 server:
-  port: 8080
+  port: 8090
 
 spring:
   redis:
     database: 0
-    host: mq-redis
+    host: 127.0.0.1
     port: 6379
-    password: das123
+#    password: vjteck
 
   datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://stolon-proxy-service.qsc-psql.svc.cluster.local:5432/code_system
-    username: postgres
-    password: daship123
-    hikari:
-      poolName: authServerCP
-      maximum-pool-size: 10
+    driverClassName : com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url : jdbc:sqlserver://114.32.41.52:1433;databaseName=Coin168
+    username : sa
+    password : P@ssw0rd
+    validationQuery : SELECT 1
