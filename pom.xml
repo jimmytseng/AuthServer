@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.vjteck</groupId>
 	<artifactId>CoinOauth</artifactId>
-	<version>1.8.4</version>
+	<version>1.0</version>
 	<packaging>jar</packaging>
 
 	<parent>
