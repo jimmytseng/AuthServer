@@ -11,6 +11,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -66,7 +67,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	}
     
     public PasswordEncoder passwordEncoder(){
-    	PasswordEncoder encoder =  NoOpPasswordEncoder.getInstance();
+//    	PasswordEncoder encoder =  NoOpPasswordEncoder.getInstance();
 //    	switch("noop"){
 //        	case "noop":
 //        		encoder = NoOpPasswordEncoder.getInstance();
@@ -74,7 +75,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //    		default :	
 //    			encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder() ;
 //    	}
-        return encoder;
+        return  new BCryptPasswordEncoder();
     }
 
     @Bean
