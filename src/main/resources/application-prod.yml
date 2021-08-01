@@ -10,7 +10,7 @@ spring:
 
   datasource:
     driverClassName : com.microsoft.sqlserver.jdbc.SQLServerDriver
-    url : jdbc:sqlserver://114.32.41.52:1433;databaseName=Coin168
+    url : jdbc:sqlserver://localhost:1433;databaseName=Coin168
     username : sa
-    password : P@ssw0rd
+    password : Cycu@19880902
     validationQuery : SELECT 1
