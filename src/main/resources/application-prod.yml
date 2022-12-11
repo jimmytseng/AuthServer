@@ -1,0 +1,16 @@
+server:
+  port: 8090
+
+spring:
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+#    password: vjteck
+
+  datasource:
+    driverClassName : com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url : jdbc:sqlserver://localhost:1433;databaseName=Coin168
+    username : sa
+    password : Cycu@19880902
+    validationQuery : SELECT 1
